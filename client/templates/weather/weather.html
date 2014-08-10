@@ -1,0 +1,21 @@
+<template name="weather">
+	<div class="box">
+		<h1>Today's Weather</h1>
+		<div id="{{forecast._id}}">
+			<h3>{{forecast.currentDescription}} {{forecast.currentTemp}}&#176;C</h3>
+			<h4>Sunrise {{fromNow forecast.sunrise}}</h4>
+			<h4>Sunset {{fromNow forecast.sunset}}</h4>
+			<h5>Data updated {{fromNow forecast.timestamp}} <span class="refresh genericon genericon-refresh"></span></h5>
+		</div>
+	</div>
+
+	<div class="box">
+		<h1>Tomorow's Foreast</h1>
+		<div>
+			<h3>{{forecast.tomorrowDescription}}</h3>
+			<h3>High: {{forecast.tomorrowHigh}}&#176;C</h3>
+			<h3>Low: {{forecast.tomorrowLow}}&#176;C</h3>
+			<h5>Data updated {{fromNow forecast.timestamp}} <span class="refresh genericon genericon-refresh"></span></h5>
+		</div>
+	</div>
+</template>

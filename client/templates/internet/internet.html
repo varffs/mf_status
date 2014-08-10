@@ -1,0 +1,11 @@
+<template name="internet">
+	<div class="box">
+		<h1>Internet</h1>
+		<div>
+			<h3>Used: {{bandwidthRemainingPercent report.remaining}}</h3>
+			<h3>Remaining: {{bandwidthRemainingGB report.remaining}}</h3>
+			<h4>Bandwidth reset {{fromNow report.nextBill}}</h4>
+			<h5>Data updated {{fromNow report.timestamp}} <span class="refresh genericon genericon-refresh"></span></h5>
+		</div>
+	</div>
+</template>
